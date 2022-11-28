@@ -15,7 +15,12 @@ const { json } = require('express')
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+{
+  origin: 'https://autologin.netlify.app/',
+  optionsSuccessStatus: 200 
+}
+))
 
 app.get('/', (req, resp) => {
     resp.json({ message: "hello from server" })
