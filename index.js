@@ -17,7 +17,7 @@ const { json } = require('express')
 app.use(express.json())
 app.use(cors(
 {
-  origin: 'https://autologin.netlify.app/',
+  origin: 'https://autologin.netlify.app',
   optionsSuccessStatus: 200 
 }
 ))
