@@ -91,7 +91,11 @@ app.post('/login', (req, resp) => {
 
                 if (match) {
                     const { _id, email, password } = user
-                    let datafortoken = jwt.sign({ id: _id, email: email, password: password }, 'shivammaharaj')
+                    let datafortoken = jwt.sign({ id: _id, email: email, password: password }, 'shivammaharaj',{
+
+           expiresIn: '10m' // expires in 10 minutes
+
+      })
                     resp.json({ message: "Login successful", user: { _id: user._id, name: user.name, email: user.email }, accessToken: datafortoken })
                 }
                 else {
