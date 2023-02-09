@@ -1,6 +1,6 @@
 const { sign, verify, JsonWebTokenError } = require('jsonwebtoken')
 
-
+// jwt token
 function generateToken(user) {
     const accessToken = sign(user, process.env.ACCESS_KEY)
     return accessToken
