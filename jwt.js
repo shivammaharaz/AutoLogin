@@ -1,6 +1,6 @@
 const { sign, verify, JsonWebTokenError } = require('jsonwebtoken')
 
-// testing my webhook
+// testing my webhoo
 function generateToken(user) {
     const accessToken = sign(user, process.env.ACCESS_KEY)
     return accessToken
