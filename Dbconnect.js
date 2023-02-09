@@ -5,7 +5,7 @@ url = 'mongodb+srv://Shivam:2001@cluster0.bxo7vjp.mongodb.net/MERN'
 
 mongoose.connect(url, (err) => {
     if (!err) {
-        console.log(" Db connencted");
+        console.log(" Db connencted")
     }
 })
 
